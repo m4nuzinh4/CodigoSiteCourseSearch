@@ -15,7 +15,7 @@
 
         h1 {
             text-align: center;
-            color: #4CAF50; /* Cor do título */
+            color: #4CAF50; 
         }
 
         .container {
@@ -68,10 +68,10 @@
             padding-bottom: 20px;
             border-radius: 5px;
             margin-bottom: 15px;
-            display: inline-block; /* Permite exibir cursos lado a lado */
-            width: calc(16.66% - 10px); /* Cada curso ocupa 1/6 da linha */
-            box-sizing: border-box; /* Inclui o padding e border no tamanho total */
-            vertical-align: top; /* Alinha os cursos na parte superior */
+            display: inline-block;
+            width: calc(16.66% - 10px);
+            box-sizing: border-box;
+            vertical-align: top;
         }
 
         .curso h3 {
@@ -85,9 +85,9 @@
         }
 
         .curso a {
-            color: #4CAF50; /* Cor do link "Ver Curso" */
+            color: #4CAF50;
             text-decoration: none;
-            margin-right: 10px; /* Espaço entre o link e o botão de excluir */
+            margin-right: 10px;
         }
 
         .curso a:hover {
@@ -95,18 +95,18 @@
         }
 
         .cursos-cadastrados {
-            padding-left: 20px; /* Afastar título "Cursos Cadastrados" */
+            padding-left: 20px;
         }
 
         .cursos-lista {
-            padding-left: 20px; /* Afastar conteúdo dentro da div */
+            padding-left: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>CourseSearch</h1> <!-- Título centralizado -->
+    <h1>CourseSearch</h1>
     <div class="container">
-        <h2>Cadastro de Cursos</h2> <!-- Título do formulário -->
+        <h2>Cadastro de Cursos</h2>
         <form action="/cadastro" method="POST">
             <input type="text" name="nome" placeholder="Nome do Curso" required>
             <input type="text" name="plataforma" placeholder="Plataforma" required>
@@ -154,7 +154,7 @@
             cursos.forEach(curso => {
                 const nome = curso.querySelector('h3').innerText.toLowerCase();
                 const descricao = curso.querySelector('p:nth-child(2)').innerText.toLowerCase();
-                const categoria = curso.querySelector('p:nth-child(6)').innerText.toLowerCase(); // Categoria
+                const categoria = curso.querySelector('p:nth-child(6)').innerText.toLowerCase();
                 curso.style.display = (nome.includes(busca) || descricao.includes(busca) || categoria.includes(busca)) ? '' : 'none';
             });
         }
